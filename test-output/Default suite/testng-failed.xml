@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="none" name="Failed suite [Default suite]">
+  <test parallel="none" name="Default test(failed)">
+    <classes>
+      <class name="my.fb.tests.SignUpPageTests">
+        <methods>
+          <include name="setup"/>
+          <include name="signout"/>
+          <include name="fileUploadTest"/>
+          <include name="alertDialogTest"/>
+          <include name="fileDownloadTest"/>
+        </methods>
+      </class> <!-- my.fb.tests.SignUpPageTests -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
