@@ -3,9 +3,11 @@ package my.fb.tests;
 import org.testng.annotations.Test;
 
 import my.fb.pages.FileUpDownLoadAlertsPopUpsPage;
+import my.fb.pages.FindBrokenLinksPage;
 import my.fb.pages.SignUpElementsDialogPage;
 import my.fb.pages.SignUpPage;
 import my.fb.pages.ToolTipPage;
+import my.fb.pages.WebTablePage;
 
 import org.testng.annotations.BeforeMethod;
 
@@ -13,8 +15,10 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
@@ -95,10 +99,19 @@ public class SignUpPageTests {
 	  ToolTipPage tt = new ToolTipPage(driver);
 	  tt.readTextOfToolTip();
   }
+  
   @Test
-  public void toolTipTest1() {
-	  ToolTipPage tt = new ToolTipPage(driver);
-	  tt.readTextOfToolTip();
+  public void findBorkenUrlsTest() throws IOException {
+	  FindBrokenLinksPage brokenLinks = new FindBrokenLinksPage(driver);
+	  brokenLinks.findBrokenLinks();
+	  
+  }
+  
+  @Test
+  public void findWebTableTest() {
+	  WebTablePage webTable = new WebTablePage(driver);
+	  webTable.fetchWebTableData();
+	  
   }
 
   @BeforeMethod
