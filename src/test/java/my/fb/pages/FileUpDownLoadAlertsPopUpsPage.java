@@ -86,9 +86,9 @@ public class FileUpDownLoadAlertsPopUpsPage {
 	  public void handlePopUpDialog() {
 		  popup = driver.findElement(By.xpath("//*[@id=\"u_0_8_Za\"]/button"));
 		  
-		Set<String> window = driver.getWindowHandles();
+		Set<String> windowhandles = driver.getWindowHandles();
 		
-		for(String str : window) {
+		for(String str : windowhandles) {
 			System.out.println("Inside popup" +str);
 		}
 		

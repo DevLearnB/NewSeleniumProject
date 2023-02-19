@@ -5,6 +5,8 @@ import org.testng.annotations.Test;
 import my.fb.pages.FileUpDownLoadAlertsPopUpsPage;
 import my.fb.pages.SignUpElementsDialogPage;
 import my.fb.pages.SignUpPage;
+import my.fb.pages.ToolTipPage;
+
 import org.testng.annotations.BeforeMethod;
 
 import java.io.FileOutputStream;
@@ -88,6 +90,11 @@ public class SignUpPageTests {
 	  page.handlePopUpDialog();
   }
   
+  @Test
+  public void toolTipTest() {
+	  ToolTipPage tt = new ToolTipPage(driver);
+	  tt.readTextOfToolTip();
+  }
 
   @BeforeMethod
   public void setup() {
@@ -95,7 +102,6 @@ public class SignUpPageTests {
       driver = new ChromeDriver();
       driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
       driver.get("https://www.facebook.com/");
-
   }
   
   
