@@ -95,6 +95,11 @@ public class SignUpPageTests {
 	  ToolTipPage tt = new ToolTipPage(driver);
 	  tt.readTextOfToolTip();
   }
+  @Test
+  public void toolTipTest1() {
+	  ToolTipPage tt = new ToolTipPage(driver);
+	  tt.readTextOfToolTip();
+  }
 
   @BeforeMethod
   public void setup() {
