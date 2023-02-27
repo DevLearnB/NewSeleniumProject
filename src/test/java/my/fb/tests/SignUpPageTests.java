@@ -31,11 +31,12 @@ import org.openqa.selenium.logging.LogEntry;
 import org.openqa.selenium.logging.LogType;
 import org.testng.annotations.AfterMethod;
 
+@Test
 public class SignUpPageTests {
   WebDriver driver;
   private static final Logger LOGGER = Logger.getLogger(SignUpPageTests.class.getName());
   
-  @Test (priority =1)
+  @Test 
   public void signupTest() {
 	  LOGGER.info("Starting SignupTest");
 	  SignUpElementsDialogPage signupdialogpage = new SignUpElementsDialogPage(driver);
@@ -126,7 +127,7 @@ public class SignUpPageTests {
   @AfterMethod
   public void signout() {
 	 // driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-	  //driver.close();
+	  driver.quit();
   }
 
 }
